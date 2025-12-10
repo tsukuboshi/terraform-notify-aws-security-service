@@ -1,0 +1,278 @@
+{
+  "type": "message",
+  "attachments": [
+    {
+      "contentType": "application/vnd.microsoft.card.adaptive",
+      "content": {
+        "type": "AdaptiveCard",
+        "body": [
+          {
+            "type": "TextBlock",
+            "text": "<at>${mentioned_user_name}</at>",
+            "weight": "bolder",
+            "size": "medium"
+          },
+          {
+            "type": "TextBlock",
+            "text": "${service_name}で重大度<SeverityLabel>のアラートを検知しました",
+            "size": "Large",
+            "weight": "Bolder"
+          },
+          {
+            "type": "Table",
+            "columns": [
+              {
+                "width": 1
+              },
+              {
+                "width": 2
+              }
+            ],
+            "rows": [
+              {
+                "type": "TableRow",
+                "cells": [
+                  {
+                    "type": "TableCell",
+                    "items": [
+                      {
+                        "type": "TextBlock",
+                        "text": "タイトル",
+                        "weight": "Bolder"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "TableCell",
+                    "items": [
+                      {
+                        "type": "TextBlock",
+                        "wrap": true,
+                        "text": "<Title>"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "TableRow",
+                "cells": [
+                  {
+                    "type": "TableCell",
+                    "items": [
+                      {
+                        "type": "TextBlock",
+                        "text": "重要度",
+                        "weight": "Bolder"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "TableCell",
+                    "items": [
+                      {
+                        "type": "TextBlock",
+                        "wrap": true,
+                        "text": "<SeverityLabel>"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "TableRow",
+                "cells": [
+                  {
+                    "type": "TableCell",
+                    "items": [
+                      {
+                        "type": "TextBlock",
+                        "text": "修復手順",
+                        "weight": "Bolder"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "TableCell",
+                    "items": [
+                      {
+                        "type": "TextBlock",
+                        "wrap": true,
+                        "text": "[こちらをクリック](<RecommendationUrl>)"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "TableRow",
+                "cells": [
+                  {
+                    "type": "TableCell",
+                    "items": [
+                      {
+                        "type": "TextBlock",
+                        "text": "アカウントID",
+                        "weight": "Bolder"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "TableCell",
+                    "items": [
+                      {
+                        "type": "TextBlock",
+                        "wrap": true,
+                        "text": "<AwsAccountId>"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "TableRow",
+                "cells": [
+                  {
+                    "type": "TableCell",
+                    "items": [
+                      {
+                        "type": "TextBlock",
+                        "text": "リージョン",
+                        "weight": "Bolder"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "TableCell",
+                    "items": [
+                      {
+                        "type": "TextBlock",
+                        "wrap": true,
+                        "text": "<Region>"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "TableRow",
+                "cells": [
+                  {
+                    "type": "TableCell",
+                    "items": [
+                      {
+                        "type": "TextBlock",
+                        "text": "リソースタイプ",
+                        "weight": "Bolder"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "TableCell",
+                    "items": [
+                      {
+                        "type": "TextBlock",
+                        "wrap": true,
+                        "text": "<ResourceType>"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "TableRow",
+                "cells": [
+                  {
+                    "type": "TableCell",
+                    "items": [
+                      {
+                        "type": "TextBlock",
+                        "text": "リソースID",
+                        "weight": "Bolder"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "TableCell",
+                    "items": [
+                      {
+                        "type": "TextBlock",
+                        "wrap": true,
+                        "text": "<ResourceId>"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "TableRow",
+                "cells": [
+                  {
+                    "type": "TableCell",
+                    "items": [
+                      {
+                        "type": "TextBlock",
+                        "text": "初回検出日時",
+                        "weight": "Bolder"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "TableCell",
+                    "items": [
+                      {
+                        "type": "TextBlock",
+                        "wrap": true,
+                        "text": "<FirstObservedAt>"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "TableRow",
+                "cells": [
+                  {
+                    "type": "TableCell",
+                    "items": [
+                      {
+                        "type": "TextBlock",
+                        "text": "最終検出日時",
+                        "weight": "Bolder"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "TableCell",
+                    "items": [
+                      {
+                        "type": "TextBlock",
+                        "wrap": true,
+                        "text": "<LastObservedAt>"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+        "version": "1.5",
+        "msteams": {
+          "width": "full",
+          "entities": [
+            {
+              "type": "mention",
+              "text": "<at>${mentioned_user_name}</at>",
+              "mentioned": {
+                "id": "${mentioned_user_mail_address}",
+                "name": "${mentioned_user_name}"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ]
+}
