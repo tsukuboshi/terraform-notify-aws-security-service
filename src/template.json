@@ -8,7 +8,7 @@
         "body": [
           {
             "type": "TextBlock",
-            "text": "<at>${mentioned_user_name}</at>",
+            "text": "\u003cat\u003e${mentioned_user_name}\u003c/at\u003e",
             "weight": "bolder",
             "size": "medium"
           },
@@ -264,7 +264,7 @@
           "entities": [
             {
               "type": "mention",
-              "text": "<at>${mentioned_user_name}</at>",
+              "text": "\u003cat\u003e${mentioned_user_name}\u003c/at\u003e",
               "mentioned": {
                 "id": "${mentioned_user_mail_address}",
                 "name": "${mentioned_user_name}"
