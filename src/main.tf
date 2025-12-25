@@ -110,9 +110,7 @@ resource "aws_cloudwatch_event_target" "securityhub_cspm_to_teams" {
     }
 
     input_template = templatefile("${path.module}/template.json", {
-      service_name                = "SecurityHub"
-      mentioned_user_name         = var.mentioned_user_name
-      mentioned_user_mail_address = var.mentioned_user_mail_address
+      service_name = "SecurityHub"
     })
   }
 }
@@ -164,9 +162,7 @@ resource "aws_cloudwatch_event_target" "guardduty_to_teams" {
     }
 
     input_template = templatefile("${path.module}/template.json", {
-      service_name                = "GuardDuty"
-      mentioned_user_name         = var.mentioned_user_name
-      mentioned_user_mail_address = var.mentioned_user_mail_address
+      service_name = "GuardDuty"
     })
   }
 }
@@ -218,9 +214,7 @@ resource "aws_cloudwatch_event_target" "iam_access_analyzer_to_teams" {
     }
 
     input_template = templatefile("${path.module}/template.json", {
-      service_name                = "IAM Access Analyzer"
-      mentioned_user_name         = var.mentioned_user_name
-      mentioned_user_mail_address = var.mentioned_user_mail_address
+      service_name = "IAM Access Analyzer"
     })
   }
 }

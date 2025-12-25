@@ -30,8 +30,6 @@ AWS Security Services (Security Hub CSPM, GuardDuty, IAM Access Analyzer) のア
 | `system_prefix` | リソース命名用のシステムプレフィックス | `string` | Yes | - |
 | `env_prefix` | リソース命名用の環境プレフィックス | `string` | Yes | - |
 | `webhook_url` | 通知先のコミュニケーションアプリで発行した Webhook URL | `string` | Yes | - |
-| `mentioned_user_mail_address` | メンション対象ユーザーのメールアドレス (例: xxx@example.com) | `string` | Yes | - |
-| `mentioned_user_name` | メンション対象ユーザーの表示名 | `string` | Yes | - |
 | `securityhub_cspm_severity_labels` | Security Hub CSPM の通知対象重大度リスト (CRITICAL/HIGH/MEDIUM/LOW/INFORMATIONAL)。空リストで通知無効化。 | `list(string)` | No | `["HIGH", "CRITICAL"]` |
 | `guardduty_severity_labels` | GuardDuty の通知対象重大度リスト (CRITICAL/HIGH/MEDIUM/LOW/INFORMATIONAL)。空リストで通知無効化。 | `list(string)` | No | `["HIGH", "CRITICAL"]` |
 | `iam_access_analyzer_severity_labels` | IAM Access Analyzer の通知対象重大度リスト (CRITICAL/HIGH/MEDIUM/LOW/INFORMATIONAL)。空リストで通知無効化。 | `list(string)` | No | `["HIGH", "CRITICAL"]` |

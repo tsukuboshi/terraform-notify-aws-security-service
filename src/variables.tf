@@ -23,18 +23,6 @@ variable "webhook_url" {
   sensitive   = true
 }
 
-variable "mentioned_user_mail_address" {
-  description = "Email address of the user to mention (e.g., xxx@example.com)"
-  default     = "example@gmail.com"
-  type        = string
-}
-
-variable "mentioned_user_name" {
-  description = "Display name of the user to mention"
-  default     = "example"
-  type        = string
-}
-
 variable "securityhub_cspm_severity_labels" {
   description = "Severity label list to notify for Security Hub CSPM (CRITICAL/HIGH/MEDIUM/LOW/INFORMATIONAL). Empty list disables notifications."
   type        = list(string)

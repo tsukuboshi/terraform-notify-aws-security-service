@@ -8,12 +8,6 @@
         "body": [
           {
             "type": "TextBlock",
-            "text": "\u003cat\u003e${mentioned_user_name}\u003c/at\u003e",
-            "weight": "bolder",
-            "size": "medium"
-          },
-          {
-            "type": "TextBlock",
             "text": "${service_name}で重大度<SeverityLabel>のアラートを検知しました",
             "size": "Large",
             "weight": "Bolder"
@@ -260,17 +254,7 @@
         "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
         "version": "1.4",
         "msteams": {
-          "width": "full",
-          "entities": [
-            {
-              "type": "mention",
-              "text": "\u003cat\u003e${mentioned_user_name}\u003c/at\u003e",
-              "mentioned": {
-                "id": "${mentioned_user_mail_address}",
-                "name": "${mentioned_user_name}"
-              }
-            }
-          ]
+          "width": "full"
         }
       }
     }
